@@ -3,11 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyou</title>
+    <title>Cyou - Browser & System Info</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to Cyou</h1>
+    <!-- Tooltip Quick Info (Top-Left) -->
+    <div class="tooltip-quick-info">
+        <button class="info-btn" title="Quick Info">
+            <i class="fas fa-circle-info"></i>
+        </button>
+        <div class="tooltip-content">
+            <h3>Welcome to Cyou</h3>
+            <p>Explore your system and browser information</p>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-container">
+        <button class="nav-btn active" data-page="os">
+            <i class="fas fa-desktop"></i>
+            <span>OS Info</span>
+        </button>
+        <button class="nav-btn" data-page="browser">
+            <i class="fas fa-globe"></i>
+            <span>Browser Info</span>
+        </button>
+        <button class="nav-btn" data-page="ip">
+            <i class="fas fa-lock"></i>
+            <span>IP Info</span>
+        </button>
+    </div>
+
+    <!-- Pages Container -->
+    <div class="pages-container">
+        <!-- OS Info Page -->
+        <div class="page active" id="os">
+            <div class="page-content">
+                <h2><i class="fas fa-desktop"></i> Operating System Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <label>OS Name</label>
+                        <p id="os-name">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>OS Version</label>
+                        <p id="os-version">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Platform</label>
+                        <p id="os-platform">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Cores</label>
+                        <p id="os-cores">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>RAM</label>
+                        <p id="os-ram">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Screen Resolution</label>
+                        <p id="os-resolution">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Browser Info Page -->
+        <div class="page" id="browser">
+            <div class="page-content">
+                <h2><i class="fas fa-globe"></i> Browser Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <label>Browser Name</label>
+                        <p id="browser-name">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Browser Version</label>
+                        <p id="browser-version">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>User Agent</label>
+                        <p id="browser-ua">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Engine</label>
+                        <p id="browser-engine">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Language</label>
+                        <p id="browser-lang">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Cookies Enabled</label>
+                        <p id="browser-cookies">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IP Info Page -->
+        <div class="page" id="ip">
+            <div class="page-content">
+                <h2><i class="fas fa-lock"></i> IP Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <label>Public IP</label>
+                        <p id="ip-address">Loading...</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Country</label>
+                        <p id="ip-country">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>City</label>
+                        <p id="ip-city">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Region</label>
+                        <p id="ip-region">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>ISP</label>
+                        <p id="ip-isp">-</p>
+                    </div>
+                    <div class="info-card">
+                        <label>Timezone</label>
+                        <p id="ip-timezone">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
